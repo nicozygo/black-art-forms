@@ -2,7 +2,6 @@
 	import Menu from './Menu.svelte';
 	import Icon from './Icon.svelte';
 
-
 	// Show mobile icon and display menu
 	export let showMobileMenu = false;
 
@@ -33,24 +32,23 @@
 		box-shadow: 0 0 10px var(--grey);
 		background: rgba(255, 255, 255, 0.95);
 		z-index: 99;
-  }
+	}
 
 	nav {
-			width: 100%;
-			padding: 0 var(--base-padding);
-			margin: 0 auto;
-		}
+		width: 100%;
+		padding: 0 var(--base-padding);
+		margin: 0 auto;
+	}
 
-  @media (min-width: 900px) {
-	.mobile-menu {
-		display: none;
-		}
-  }
-
-  @media (max-width: 900px) {
-	.desktop-menu {
+	@media (min-width: 900px) {
+		.mobile-menu {
 			display: none;
 		}
 	}
 
+	@media (max-width: 900px) {
+		.desktop-menu {
+			display: none;
+		}
+	}
 </style>

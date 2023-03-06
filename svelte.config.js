@@ -15,7 +15,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$components: path.resolve('./src/lib/components'),
-			$shared: path.resolve('./src/lib/shared')
+			$shared: path.resolve('./src/lib/components/shared')
 		}
 	}
 };

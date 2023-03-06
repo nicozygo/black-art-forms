@@ -26,43 +26,42 @@
 
 	.menu {
 		list-style: none;
-  }
+	}
 
-	.menu	a {
-			text-decoration: none;
-		}
+	.menu a {
+		text-decoration: none;
+	}
 
 	.menu li {
-			font-family: var(--heading-font);
-			font-size: 1.25rem;
-			font-weight: 600;
-			text-transform: uppercase;
-			text-decoration: none;
-			line-height: 1.5;
-    }
+		font-family: var(--heading-font);
+		font-size: 1.25rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 1.5;
+	}
 
 	.menu li::before {
-				content: '';
-				margin-right: var(--base-padding);
-				border: solid 5px var(--primary);
-				background: transparent;
-				width: 8px;
-				height: 8px;
-				transform: rotate(45deg);
-				transition: all 300ms ease-in-out;
-			}
+		content: '';
+		margin-right: var(--base-padding);
+		border: solid 5px var(--primary);
+		background: transparent;
+		width: 8px;
+		height: 8px;
+		transform: rotate(45deg);
+		transition: all 300ms ease-in-out;
+	}
 
 	.menu li:hover {
-				color: var(--hover);
-			}
+		color: var(--hover);
+	}
 
 	.menu li:hover::before {
-				content: '';
-				border: solid 5px var(--hover);
-				background: var(--hover);
-				width: 8px;
-				height: 8px;
-				transform: rotate(135deg);
-			}
-
+		content: '';
+		border: solid 5px var(--hover);
+		background: var(--hover);
+		width: 8px;
+		height: 8px;
+		transform: rotate(135deg);
+	}
 </style>
