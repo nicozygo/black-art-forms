@@ -47,6 +47,7 @@
 
 	.mobile-menu,
 	.desktop-menu {
+		display: flex;
 		padding-right: var(--base-padding);
 	}
 

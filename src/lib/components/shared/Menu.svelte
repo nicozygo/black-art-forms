@@ -13,7 +13,7 @@
 <ul class="{mobile ? 'mobile' : ''} menu">
 	{#each menuItems as menuItem (menuItem.id)}
 		<a href={menuItem.href} on:click>
-			<li>{menuItem.label}</li>
+			<li style={mobile ? 'padding-bottom: var(--base-padding)' : ''}>{menuItem.label}</li>
 		</a>
 	{/each}
 </ul>
