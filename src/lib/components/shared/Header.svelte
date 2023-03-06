@@ -9,17 +9,17 @@
 	const handleIconClick = () => (showMobileMenu = !showMobileMenu);
 </script>
 
-<header class="display-f align-center p-1">
-	<nav class="display-f justify-space-between align-center">
-		<div class="p-0">
+<header>
+	<nav>
+		<div>
 			<a href="/">
-				<img src="/img/baf-logo.svg" alt="site logo" />
+				<img src="/img/logo.svg" alt="site logo" />
 			</a>
 		</div>
-		<div class="desktop-menu p-0">
+		<div class="desktop-menu">
 			<Menu mobile={false} />
 		</div>
-		<div class="mobile-menu p-2" on:click={handleIconClick} on:keyup={handleIconClick}>
+		<div class="mobile-menu" on:click={handleIconClick} on:keyup={handleIconClick}>
 			<Icon name="open" size="32px" />
 		</div>
 	</nav>
@@ -27,6 +27,8 @@
 
 <style>
 	header {
+		display: flex;
+		align-items: center;
 		position: fixed;
 		width: 100%;
 		box-shadow: 0 0 10px var(--grey);
@@ -35,9 +37,17 @@
 	}
 
 	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		width: 100%;
-		padding: 0 var(--base-padding);
+		padding: var(--base-padding);
 		margin: 0 auto;
+	}
+
+	.mobile-menu,
+	.desktop-menu {
+		padding-right: var(--base-padding);
 	}
 
 	@media (min-width: 900px) {

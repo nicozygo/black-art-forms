@@ -10,10 +10,10 @@
 	];
 </script>
 
-<ul class="{mobile ? 'mobile' : ''} menu display-f m-0 pr-2 justify-flex-end align-center">
+<ul class="{mobile ? 'mobile' : ''} menu">
 	{#each menuItems as menuItem (menuItem.id)}
 		<a href={menuItem.href} on:click>
-			<li class="display-f align-center pl-2 {mobile ? 'pb-3' : ''}">{menuItem.label}</li>
+			<li>{menuItem.label}</li>
 		</a>
 	{/each}
 </ul>
@@ -21,10 +21,16 @@
 <style>
 	.mobile {
 		flex-direction: column;
+		padding: var(--padding-md);
 		scale: 1.5;
 	}
 
 	.menu {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 0;
+		padding-right: var(--padding-md);
 		list-style: none;
 	}
 
@@ -33,6 +39,9 @@
 	}
 
 	.menu li {
+		display: flex;
+		align-items: center;
+		padding-left: var(--base-padding);
 		font-family: var(--heading-font);
 		font-size: 1.25rem;
 		font-weight: 600;

@@ -1,6 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,8 +13,11 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			$components: path.resolve('./src/lib/components'),
-			$shared: path.resolve('./src/lib/components/shared')
+			// this will match a directory and its contents
+			// (`my-directory/x` resolves to `path/to/my-directory/x`)
+			$components: 'src/lib/components',
+			$shared: 'src/lib/components/shared',
+			$static: '/static'
 		}
 	}
 };

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
-:global(:root) {
+:root {
 	/* colours */
 	--primary: #202020;
 	--secondary: #f6f6f6;
@@ -15,7 +15,14 @@
 
 	/* spacing */
 	--base-padding: 10px;
+	--padding-md: var(--base-padding) * 2;
+	--padding-lg: var(--base-padding) * 3;
+	--padding-xl: var(--base-padding) * 4;
+
 	--base-margin: 10px;
+	--margin-md: var(--base-margin) * 2;
+	--margin-lg: var(--base-margin) * 3;
+	--margin-xl: var(--base-margin) * 4;
 
 	/* borders */
 	--base-border-thickness: 3px;
