@@ -8,13 +8,8 @@
 <main>
   {JSON.stringify(data)}
   <p>
-    <a href="/criteria">
-      <button>View Criteria</button>
-    </a>
-  </p>
-  <p>
-    <a href="/artists/damel-carayol">
-      <button>View Artist</button>
+    <a href="/">
+      <button>Go to homepage</button>
     </a>
   </p>
 </main>
