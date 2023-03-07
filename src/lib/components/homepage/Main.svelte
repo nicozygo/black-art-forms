@@ -3,7 +3,7 @@
 		export let width: number;
     let main: HTMLElement | null;
 
-    export function scroll(e) {
+    export function scroll(e: { deltaY: number; }) {
       if (main && width > 1024) {
           main.scrollLeft += e.deltaY;
       }
@@ -11,6 +11,7 @@
 
   </script>
 
+<!-- toggle overdlow hidden for large screens when scrolling horizontally -->
 <svelte:head>
    {#if width > 1024}
       <style>
