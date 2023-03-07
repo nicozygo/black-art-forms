@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 
 		export let width: number;
     let main: HTMLElement | null;
@@ -10,22 +9,21 @@
       }
 		}
 
-		export function hidden(width: number) {
-			if (width > 1024) {
-				return 'hidden'
-			} else {
-				return 'scroll'
-			}
-		}
-
   </script>
 
- 	<svelte:body />
+<svelte:head>
+   {#if width > 1024}
+      <style>
+         body {
+            overflow: hidden;
+         }
+      </style>
+   {/if}
+</svelte:head>
 
-	{console.log(width)}
-  <main bind:this={main} on:wheel={scroll} >
+<main bind:this={main} on:wheel={scroll} >
     <slot></slot>
-  </main>
+</main>
 
 
 <style>
