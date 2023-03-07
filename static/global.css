@@ -15,14 +15,14 @@
 
 	/* spacing */
 	--base-padding: 10px;
-	--padding-md: var(--base-padding) * 2;
-	--padding-lg: var(--base-padding) * 3;
-	--padding-xl: var(--base-padding) * 4;
+	--padding-md: 20px;
+	--padding-lg: 30px;
+	--padding-xl: 40px;
 
 	--base-margin: 10px;
-	--margin-md: var(--base-margin) * 2;
-	--margin-lg: var(--base-margin) * 3;
-	--margin-xl: var(--base-margin) * 4;
+	--margin-md: 20px;
+	--margin-lg: 30px;
+	--margin-xl: 40px;
 
 	/* borders */
 	--base-border-thickness: 3px;
@@ -63,13 +63,13 @@ body {
 .horizontal {
 	height: calc(100vh - 100px);
 	width: 95vw;
-	flex: 0 0 auto;
 	scroll-behavior: smooth;
+	padding: var(--base-padding);
 }
 
 @media (max-width: 768px) {
 	.horizontal {
-		margin-top: 100px;
+		padding-top: 100px;
 		height: auto;
 		width: 100%;
 	}

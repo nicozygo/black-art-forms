@@ -2,7 +2,7 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-		type RouteParams = {
+		interface RouteParams {
 			slug: sting;
 		}
 		// interface Error {}
