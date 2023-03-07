@@ -17,7 +17,8 @@ const config = {
 			// (`my-directory/x` resolves to `path/to/my-directory/x`)
 			$components: 'src/lib/components',
 			$shared: 'src/lib/components/shared',
-			$static: '/static'
+			$static: '/static',
+			$types: 'src/types'
 		}
 	}
 };

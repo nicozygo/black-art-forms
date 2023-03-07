@@ -10,17 +10,25 @@
       }
 		}
 
+		export function hidden(width: number) {
+			if (width > 1024) {
+				return 'hidden'
+			} else {
+				return 'scroll'
+			}
+		}
+
   </script>
 
  	<svelte:body />
 
+	{console.log(width)}
   <main bind:this={main} on:wheel={scroll} >
     <slot></slot>
   </main>
 
 
 <style>
-
 	main {
 		padding: 0;
 	 	height: 95vh;

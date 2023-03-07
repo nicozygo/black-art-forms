@@ -3,11 +3,13 @@
   import Main from '$components/homepage/Main.svelte';
   import Intro from '$components/homepage/Intro.svelte';
   import About from '$components/homepage/About.svelte';
+  import Partners from '$components/homepage/Partners.svelte';
 
 	export let data: PageData;
   export let width: number;
 
   export const homepage = data.props.homepage.data.attributes;
+  export let partners = data.props.partners.data;
 
 </script>
 
@@ -16,4 +18,5 @@
 <Main { width } >
   <Intro description={homepage.introduction} />
   <About description={homepage.about} />
+  <Partners {partners} title={homepage.partnersTitle} />
 </Main>
