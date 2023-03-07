@@ -61,10 +61,12 @@ body {
 }
 
 .horizontal {
+	display: flex;
 	height: calc(100vh - 100px);
 	width: 95vw;
 	scroll-behavior: smooth;
 	padding: var(--base-padding);
+	flex: 0 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -91,6 +93,10 @@ body {
 	.vertical {
 		width: auto;
 	}
+}
+
+.overflow {
+	overflow-y: hidden;
 }
 
 .container {

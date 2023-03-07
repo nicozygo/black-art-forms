@@ -7,7 +7,7 @@
 <footer
 	style={fixed ? 'position: fixed' : 'position: relative'}
 >
-	<p class="p-0 m-0">© Publicis Groupe {year}. All rights reserved</p>
+	<p>© Publicis Groupe {year}. All rights reserved</p>
 </footer>
 
 <style>
