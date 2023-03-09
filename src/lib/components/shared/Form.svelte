@@ -27,8 +27,8 @@
 		display: inline-block;
 		line-height: 1.5;
 		vertical-align: middle;
-		font-size: var(--base-font);
-		margin: var(--base-margin) * 2 0 var(--base-margin);
+		font-size: var(--base-font-size);
+		margin: 20px 0 10px;
 	}
 
 	input {

@@ -4,6 +4,7 @@
 	import Intro from '$components/homepage/Intro.svelte';
 	import About from '$components/homepage/About.svelte';
 	import Partners from '$components/homepage/Partners.svelte';
+	import Join from '$components/homepage/Join.svelte';
 
 	export let data: PageData;
 	export let width: number;
@@ -18,4 +19,9 @@
 	<Intro description={homepage.introduction} />
 	<About description={homepage.about} />
 	<Partners {partners} title={homepage.partnersTitle} />
+	<Join
+		title={homepage.submitYourWorkTitle}
+		description={homepage.submitYourWork}
+		cta={homepage.criteriaButton}
+	/>
 </Main>
