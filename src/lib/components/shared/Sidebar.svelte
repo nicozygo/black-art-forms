@@ -33,23 +33,22 @@
 		align-items: center;
 	}
 
-		.close {
-			display: inline-flex;
-			margin: 40px;
-			flex-direction: row;
-			justify-content: flex-end;
-			align-items: flex-end;
-			width: 90%;
-		}
+	.close {
+		display: inline-flex;
+		margin: 40px;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-end;
+		width: 90%;
+	}
 
+	.navbar {
+		margin-top: 20vh;
+	}
+
+	@media screen and (min-width: 1000px) {
 		.navbar {
-			margin-top: 20vh;
-		}
-
-		@media screen and (min-width: 1000px) {
-			.navbar {
 			display: none;
-			}
 		}
-
+	}
 </style>

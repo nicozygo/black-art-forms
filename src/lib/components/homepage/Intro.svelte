@@ -30,17 +30,18 @@
 		height: 100%;
 	}
 
-	.title, .description {
-	padding: var(--base-padding);
+	.title,
+	.description {
+		padding: var(--base-padding);
 	}
 
 	@media (min-width: 769px) and (max-width: 1024px) {
 		.intro {
-		grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 
-	@media (max-width:768px) {
+	@media (max-width: 768px) {
 		.intro {
 			grid-template-columns: 1fr;
 		}
@@ -49,5 +50,4 @@
 			margin: auto;
 		}
 	}
-
 </style>

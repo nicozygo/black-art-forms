@@ -2,8 +2,9 @@
 // for information about these interfaces
 declare global {
 	namespace App {
-
-		interface Params extends RouteParams {slug: string}
+		interface Params extends RouteParams {
+			slug: string;
+		}
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}

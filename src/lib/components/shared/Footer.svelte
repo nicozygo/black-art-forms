@@ -4,9 +4,7 @@
 	const year = today.getFullYear();
 </script>
 
-<footer
-	style={fixed ? 'position: fixed' : 'position: relative'}
->
+<footer style={fixed ? 'position: fixed' : 'position: relative'}>
 	<p>© Publicis Groupe {year}. All rights reserved</p>
 </footer>
 

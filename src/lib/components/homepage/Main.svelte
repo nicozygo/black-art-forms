@@ -1,48 +1,44 @@
 <script lang="ts">
+	export let width: number;
+	let main: HTMLElement | null;
 
-		export let width: number;
-    let main: HTMLElement | null;
-
-    export function scroll(e: { deltaY: number; }) {
-      if (main && width > 1024) {
-          main.scrollLeft += e.deltaY;
-      }
+	export function scroll(e: { deltaY: number }) {
+		if (main && width > 1024) {
+			main.scrollLeft += e.deltaY;
 		}
-
-  </script>
+	}
+</script>
 
 <!-- toggle overdlow hidden for large screens when scrolling horizontally -->
 <svelte:head>
-   {#if width > 1024}
-      <style>
-         body {
-            overflow: hidden;
-         }
-      </style>
-   {/if}
+	{#if width > 1024}
+		<style>
+			body {
+				overflow: hidden;
+			}
+		</style>
+	{/if}
 </svelte:head>
 
-<main bind:this={main} on:wheel={scroll} >
-    <slot></slot>
+<main bind:this={main} on:wheel={scroll}>
+	<slot />
 </main>
-
 
 <style>
 	main {
 		padding: 0;
-	 	height: 95vh;
+		height: 95vh;
 		display: flex;
 		flex-wrap: nowrap;
 		overflow-x: scroll;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 		overflow-y: hidden;
-		}
+	}
 
 	main::-webkit-scrollbar {
-			display: none;
-		}
-
+		display: none;
+	}
 
 	@media (max-width: 1024px) {
 		main {
@@ -52,6 +48,4 @@
 			height: auto;
 		}
 	}
-
-
 </style>
