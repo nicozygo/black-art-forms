@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ScrollButton from '$shared/ScrollButton.svelte';
+
 	export let width: number;
 	let main: HTMLElement | null;
 
@@ -23,6 +25,11 @@
 <main bind:this={main} on:wheel={scroll}>
 	<slot />
 </main>
+<div class="row">
+	<div class="scrolling">
+		<ScrollButton />
+	</div>
+</div>
 
 <style>
 	main {
@@ -35,17 +42,25 @@
 		scrollbar-width: none;
 		overflow-y: hidden;
 	}
-
 	main::-webkit-scrollbar {
 		display: none;
 	}
-
 	@media (max-width: 1024px) {
 		main {
 			flex-wrap: wrap;
 			flex-direction: column;
 			overflow-x: hidden;
 			height: auto;
+		}
+	}
+	.scrolling {
+		position: absolute;
+		bottom: 5%;
+		right: 2%;
+	}
+	@media (max-width: 1024px) {
+		.scrolling {
+			display: none;
 		}
 	}
 </style>

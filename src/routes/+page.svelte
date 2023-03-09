@@ -9,7 +9,7 @@
 	export let width: number;
 
 	export const homepage = data.props.homepage.data.attributes;
-	export let partners = data.props.partners.data;
+	export const partners = data.props.partners.data;
 </script>
 
 <svelte:window bind:innerWidth={width} />
