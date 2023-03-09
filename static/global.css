@@ -31,16 +31,16 @@
 	--base-font: Roboto, Helvetica, system-ui, -apple-system, sans-serif;
 	--base-font-size: 1rem;
 	--heading-font: 'Roboto Condensed', Helvetica, system-ui, -apple-system, sans-serif;
-	--font-size-sm: var(--base-font-size) * 0.875;
-	--font-size-lg: var(--base-font-size) * 1.5;
-	--font-size-xl: var(--base-font-size) * 3;
-	--font-size-xxl: var(--base-font-size) * 6;
-	--font-size-xxxl: var(--base-font-size) * 10;
-	--font-size-btn: var(--base-font-size) * 1.25;
-	--font-size-mobile-lg: var(--base-font-size) * 1.25;
-	--font-size-mobile-xl: var(--base-font-size) * 2;
-	--font-size-mobile-xxl: var(--base-font-size) * 2.5;
-	--font-size-mobile-xxxl: var(--base-font-size) * 5.125;
+	--font-size-sm: 0.875rem;
+	--font-size-lg: 1.5rem;
+	--font-size-xl: 3rem;
+	--font-size-xxl: 6rem;
+	--font-size-xxxl: 10rem;
+	--font-size-btn: 1.25rem;
+	--font-size-mobile-lg: 1.25rem;
+	--font-size-mobile-xl: 2rem;
+	--font-size-mobile-xxl: 2.5rem;
+	--font-size-mobile-xxxl: 5.125rem;
 }
 
 * {

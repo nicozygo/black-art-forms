@@ -62,7 +62,7 @@
 		font-family: var(--heading-font);
 		text-transform: uppercase;
 		font-weight: 600;
-		font-size: 1.5rem;
+		font-size: var(--font-size-lg);
 		padding: var(--base-padding);
 	}
 </style>
