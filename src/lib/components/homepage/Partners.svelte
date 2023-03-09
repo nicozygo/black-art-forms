@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PartnerType } from '$types/PartnerType';
-	import Partner from './Partner.svlete';
+	import Partner from './Partner.svelte';
 	export let title: string;
 	export let partners: [PartnerType];
 </script>
