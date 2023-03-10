@@ -4,7 +4,6 @@
 	}
 </script>
 
-<div>
 	<form on:submit|preventDefault={validate}>
 		<label for="name">First Name</label>
 		<input type="text" name="name" required aria-required="true" />
@@ -16,7 +15,6 @@
 		<input type="url" name="link" id="link" required aria-required="true" />
 		<button type="submit">Submit form</button>
 	</form>
-</div>
 
 <style>
 	form {

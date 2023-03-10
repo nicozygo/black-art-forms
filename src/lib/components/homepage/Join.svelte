@@ -29,7 +29,7 @@
 <style>
 	.join {
 		display: grid;
-		grid-template-columns: 1fr 1fr 10%;
+		grid-template-columns: 1fr 1fr 20%;
 		grid-template-rows: 1fr;
 		grid-column-gap: var(--padding-md);
 		grid-row-gap: 0px;
