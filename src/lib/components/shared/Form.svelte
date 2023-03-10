@@ -4,17 +4,17 @@
 	}
 </script>
 
-	<form on:submit|preventDefault={validate}>
-		<label for="name">First Name</label>
-		<input type="text" name="name" required aria-required="true" />
-		<label for="surname">Last Name</label>
-		<input type="text" name="surname" id="surname" required aria-required="true" />
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" required aria-required="true" />
-		<label for="link">Portfolio Link</label>
-		<input type="url" name="link" id="link" required aria-required="true" />
-		<button type="submit">Submit form</button>
-	</form>
+<form on:submit|preventDefault={validate}>
+	<label for="name">First Name</label>
+	<input type="text" name="name" required aria-required="true" />
+	<label for="surname">Last Name</label>
+	<input type="text" name="surname" id="surname" required aria-required="true" />
+	<label for="email">Email Address</label>
+	<input type="email" name="email" id="email" required aria-required="true" />
+	<label for="link">Portfolio Link</label>
+	<input type="url" name="link" id="link" required aria-required="true" />
+	<button type="submit">Submit form</button>
+</form>
 
 <style>
 	form {

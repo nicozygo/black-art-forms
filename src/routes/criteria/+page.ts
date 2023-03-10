@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { PageLoad } from '../$types';
 
 export const load = (async ({ fetch }) => {
 	const url = `https://damp-garden-56906.herokuapp.com/gql`;
@@ -8,51 +8,25 @@ export const load = (async ({ fetch }) => {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify({
-			query: `{
-        homepage {
+			query: `
+      {
+        criterion {
+           data {
+               attributes {
+                 pageTitle
+                 criteriaInfo
+                 judgesTitle
+               }
+             }
+           }
+        testimonials {
             data {
               id
               attributes {
-                introduction
-                about
-                partnersTitle
-                submitYourWorkTitle
-                submitYourWork
-                criteriaButton
-              }
-          }
-        }
-        artists(sort: "fullName") {
-            data {
-            id
-            attributes
-              {
-              fullName
-              excerpt
-              slug
-              genre
-              featured
-              featuredImage {
-                data {
-                  attributes {
-                    name
-                    alternativeText
-                    caption
-                    url
-                  }
-                }
-              }
-            }
-          }
-        }
-        partners {
-            data {
-              id
-              attributes {
-                orderID
-                name
-                description
-                logo {
+                summary
+                fullName
+                jobTitle
+                profilePhoto {
                   data {
                     attributes {
                       name
@@ -62,10 +36,30 @@ export const load = (async ({ fetch }) => {
                     }
                   }
                 }
+              }
             }
           }
-        }
-      }`
+          judges(sort: "fullName") {
+            data {
+              id
+              attributes {
+                fullName
+                judgeBio
+                judgePhoto {
+                  data {
+                    attributes {
+                      name
+                      caption
+                      alternativeText
+                      url
+                    }
+                  }
+                }
+              }
+            }
+         }
+      }
+      `
 		})
 	});
 
@@ -74,13 +68,13 @@ export const load = (async ({ fetch }) => {
 	if (response.ok) {
 		return {
 			props: {
-				...data
+				data
 			}
 		};
 	} else {
 		return {
 			status: response.status,
-			error: new Error('Unable to get homepage data')
+			error: new Error('Unable to get data')
 		};
 	}
 }) satisfies PageLoad;
