@@ -9,6 +9,7 @@
 
 	let { url } = photo;
 	let visible = false;
+
 	const toggleCard = () => {
 		visible = !visible;
 	};
@@ -48,6 +49,7 @@
 
 	.front-content {
 		width: 100%;
+		padding: var(--padding-md);
 	}
 
 	.back-content {
@@ -55,9 +57,11 @@
 		top: 0;
 		left: 0;
 		height: 92%;
+		height: calc(100% - 40px);
 		background: var(--primary);
 		overflow: scroll;
 		color: white;
+		padding: var(--padding-md);
 	}
 
 	.close-button {
@@ -68,8 +72,9 @@
 
 	h3 {
 		position: absolute;
-		bottom: 0;
+		bottom: var(--padding-md);
 		color: white;
 		background: black;
+		padding: 5px;
 	}
 </style>
