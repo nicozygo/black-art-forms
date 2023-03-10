@@ -196,6 +196,11 @@ button:hover {
 	border-radius: 50%;
 }
 
+.photo {
+	width: 100%;
+	height: auto;
+}
+
 /*  Customisation CSS */
 
 .svelte-lightbox-overlay {
