@@ -4,10 +4,11 @@
 
 	export let data: PageData;
 	export let criteria = data.props.data.criterion.data.attributes;
+	export let testimonial = data.props.data.testimonials.data[0].attributes;
 </script>
 
 <main>
-	<Criteria {criteria} />
+	<Criteria {criteria} {testimonial} />
 </main>
 
 <style>

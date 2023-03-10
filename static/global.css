@@ -192,6 +192,10 @@ button:hover {
 	}
 }
 
+.rounded {
+	border-radius: 50%;
+}
+
 /*  Customisation CSS */
 
 .svelte-lightbox-overlay {
