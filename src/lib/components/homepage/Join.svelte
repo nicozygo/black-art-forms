@@ -42,6 +42,12 @@
 		padding: var(--base-padding);
 	}
 
+	@media (min-width: 769px) and (min-width: 1025px) {
+		.join {
+			padding-left: var(--padding-xl);
+		}
+	}
+
 	@media (min-width: 769px) and (max-width: 1024px) {
 		.join {
 			grid-template-columns: repeat(2, 1fr);

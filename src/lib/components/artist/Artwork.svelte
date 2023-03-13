@@ -2,7 +2,7 @@
 	import { Lightbox } from 'svelte-lightbox';
 	import Image from '$shared/Image.svelte';
 	import type { ArtworkType } from '$types/ArtworkType';
-	export let artwork: [ ArtworkType ];
+	export let artwork: [ArtworkType];
 </script>
 
 <section class="vertical container" id="artwork">
@@ -11,7 +11,7 @@
 			{#each artwork as art}
 				<div class="item">
 					<Lightbox description={`${art.attributes.name} ${art.attributes.caption}`}>
-						<Image url={art.attributes.url} alt={art.attributes.alternativeText} class="art"/>
+						<Image url={art.attributes.url} alt={art.attributes.alternativeText} class="art" />
 					</Lightbox>
 					<p>{art.attributes.name}</p>
 				</div>
@@ -35,7 +35,7 @@
 		margin: 0 0 1em;
 		width: 100%;
 	}
-	.art  {
+	.art {
 		width: 100%;
 	}
 </style>

@@ -28,5 +28,4 @@
 			flex-direction: column;
 		}
 	}
-
 </style>

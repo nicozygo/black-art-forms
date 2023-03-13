@@ -11,7 +11,7 @@
 		<div class="profile">
 			<div class="diamond">
 				<div class="inner">
-					<Image url={profile.url} alt={profile.alternativeText} class="photo"/>
+					<Image url={profile.url} alt={profile.alternativeText} class="photo" />
 				</div>
 			</div>
 		</div>
@@ -23,10 +23,9 @@
 </section>
 
 <style>
-
 	.artist {
 		display: grid;
-		grid-template-columns: .5fr 1fr;
+		grid-template-columns: 0.5fr 1fr;
 		grid-template-rows: 1fr;
 		grid-column-gap: var(--padding-md);
 		grid-row-gap: 0px;
@@ -53,17 +52,16 @@
 		margin: auto;
 		padding: var(--base-padding);
 	}
-		.inner {
-			width: 355px;
-			height: 355px;
-			transform: rotate(-45deg) translateY(-74px);
-		}
-
-		@media screen and (max-width: 1024px) {
-			.artist {
-		display: grid;
-		grid-template-columns: 1fr;
-		}
+	.inner {
+		width: 355px;
+		height: 355px;
+		transform: rotate(-45deg) translateY(-74px);
 	}
 
+	@media screen and (max-width: 1024px) {
+		.artist {
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
 </style>

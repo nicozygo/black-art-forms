@@ -42,56 +42,54 @@
 	}
 
 	figure:hover {
-			scale: 1.25;
-			z-index: 99;
-			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-			background: white;
-		}
+		scale: 1.25;
+		z-index: 99;
+		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+		background: white;
+	}
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-			backface-visibility: hidden;
-		}
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		backface-visibility: hidden;
+	}
 
-		figcaption {
-			background: linear-gradient(transparent 50%, black);
-			position: absolute;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: end;
-			width: 100%;
-			height: 100%;
-			bottom: 0;
-			z-index: 99;
-			opacity: 0;
-			font-weight: 400;
-			color: white;
-			text-align: center;
-			transition: opacity 0.2s ease-out;
-		}
+	figcaption {
+		background: linear-gradient(transparent 50%, black);
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: end;
+		width: 100%;
+		height: 100%;
+		bottom: 0;
+		z-index: 99;
+		opacity: 0;
+		font-weight: 400;
+		color: white;
+		text-align: center;
+		transition: opacity 0.2s ease-out;
+	}
 
-			p,
-			h4 {
-				width: 100%;
-				text-align: center;
-				opacity: 0;
-				font-size: 0.75em;
-				padding: 0 0 var(--base-padding);
-				transition: all 0.2s ease-out;
-			}
+	p,
+	h4 {
+		width: 100%;
+		text-align: center;
+		opacity: 0;
+		font-size: 0.75em;
+		padding: 0 0 var(--base-padding);
+		transition: all 0.2s ease-out;
+	}
 
-			p:hover {
-				opacity: 1;
-				transition: all 0.2s ease-out;
-			}
+	p:hover {
+		opacity: 1;
+		transition: all 0.2s ease-out;
+	}
 
-			h4:hover {
-				opacity: 1;
-				transition: opacity 0.2s ease-out;
-			}
-
-
+	h4:hover {
+		opacity: 1;
+		transition: opacity 0.2s ease-out;
+	}
 </style>
