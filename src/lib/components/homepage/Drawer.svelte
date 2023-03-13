@@ -28,7 +28,7 @@
 	.list {
 		height: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 	}
 
@@ -46,7 +46,7 @@
 	}
 
 	@media screen and (max-width: 1024px) {
-		button {
+		.list {
 			display: none;
 		}
 	}

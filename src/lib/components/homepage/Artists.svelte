@@ -14,7 +14,7 @@
 			<Drawer {artists} bind:open />
 		</div>
 		<div class="row">
-			<div class="masonry" style={open ? 'column-count:6' : 'column-count:5'}>
+			<div class="masonry" style={open ? 'column-count:6' : ''}>
 				{#each artists as artist}
 					<Artist {artist} />
 				{/each}
@@ -26,7 +26,7 @@
 <style>
 	.gallery {
 		display: grid;
-		grid-template-columns: 0.65fr 1fr;
+		grid-template-columns: 0.6fr 1.25fr 10%;
 		grid-template-rows: 1fr;
 		grid-column-gap: var(--padding-md);
 		grid-row-gap: 0px;
@@ -35,14 +35,26 @@
 	}
 	.drawer {
 		display: flex;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 	}
 	.masonry {
+		column-count: 5;
 		column-gap: var(--base-padding);
 		transition-property: all 4s ease-in-out 1s;
 	}
 
+	@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+		.gallery {
+			grid-template-columns: 0.75fr 1.25fr;
+		}
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.gallery {
+			grid-template-columns: 1fr;
+		}
+	}
 	@media only screen and (max-width: 1023px) and (min-width: 768px) {
 		.masonry {
 			column-count: 4;

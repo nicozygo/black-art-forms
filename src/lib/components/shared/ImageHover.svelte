@@ -25,7 +25,7 @@
 			<img {src} {alt} />
 			<figcaption>
 				<div>
-					<h4>{name}</h4>
+					<h3>{name}</h3>
 					<p>{title}</p>
 				</div>
 			</figcaption>
@@ -65,6 +65,7 @@
 		width: 100%;
 		height: 100%;
 		bottom: 0;
+		padding-bottom: var(--base-padding);
 		z-index: 99;
 		opacity: 0;
 		font-weight: 400;
@@ -74,22 +75,18 @@
 	}
 
 	p,
-	h4 {
+	h3 {
 		width: 100%;
 		text-align: center;
-		opacity: 0;
+		opacity: 1;
+		line-height: 1.25;
 		font-size: 0.75em;
-		padding: 0 0 var(--base-padding);
-		transition: all 0.2s ease-out;
+		padding: 0 0 2px;
+		transition: opacity 0.5s ease-out;
 	}
-
+	figcaption:hover,
+	h3:hover,
 	p:hover {
 		opacity: 1;
-		transition: all 0.2s ease-out;
-	}
-
-	h4:hover {
-		opacity: 1;
-		transition: opacity 0.2s ease-out;
 	}
 </style>
