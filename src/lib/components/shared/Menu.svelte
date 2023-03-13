@@ -52,7 +52,7 @@
 
 	.menu li::before {
 		content: '';
-		margin-right: var(--base-padding);
+		margin: 0 var(--base-padding);
 		border: solid 5px var(--primary);
 		background: transparent;
 		width: 8px;

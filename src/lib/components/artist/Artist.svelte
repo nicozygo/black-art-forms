@@ -7,7 +7,7 @@
 </script>
 
 <section class="vertical">
-	<div class="row container">
+	<div class="artist">
 		<div class="profile">
 			<div class="diamond">
 				<div class="inner">
@@ -16,17 +16,28 @@
 			</div>
 		</div>
 		<div class="bio">
-			<h2 class="title mb-2 pr-2">{name}</h2>
+			<h2 class="title">{name}</h2>
 			<SvelteMarkdown source={bio} />
 		</div>
 	</div>
 </section>
 
 <style>
-	.profile {
-		margin: 10px;
-	}
 
+	.artist {
+		display: grid;
+		grid-template-columns: .5fr 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: var(--padding-md);
+		grid-row-gap: 0px;
+		align-items: center;
+		max-width: 1400px;
+		margin: 0 auto var(--margin-md);
+	}
+	.profile {
+		padding-left: var(--padding-md);
+		margin: 100px auto 100px;
+	}
 	.diamond {
 		margin: auto;
 		transform-origin: 50% 50%;
@@ -36,16 +47,23 @@
 		transform: rotate(45deg) translateY(10px);
 		border: var(--base-padding) solid black;
 	}
+
+	.bio {
+		max-width: 768px;
+		margin: auto;
+		padding: var(--base-padding);
+	}
 		.inner {
 			width: 355px;
 			height: 355px;
 			transform: rotate(-45deg) translateY(-74px);
 		}
 
-		@media screen and (max-width: 1200px) {
-			.profile {
-			margin: 100px auto 100px;
-			}
+		@media screen and (max-width: 1024px) {
+			.artist {
+		display: grid;
+		grid-template-columns: 1fr;
 		}
+	}
 
 </style>

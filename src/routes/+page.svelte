@@ -11,6 +11,9 @@
 
 	export const homepage = data.props.homepage.data.attributes;
 	export const partners = data.props.partners.data;
+	let artists = data.props.artists.data;
+	console.log("🚀 ~ file: +page.svelte:15 ~ artists:", artists)
+
 </script>
 
 <svelte:window bind:innerWidth={width} />

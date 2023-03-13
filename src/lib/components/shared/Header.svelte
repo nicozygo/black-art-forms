@@ -12,7 +12,7 @@
 <header>
 	<nav>
 		<div>
-			<a href="/">
+			<a href="/" class="site-logo">
 				<img src="/img/logo.svg" alt="site logo" />
 			</a>
 		</div>
@@ -43,6 +43,10 @@
 		width: 100%;
 		padding: var(--base-padding);
 		margin: 0 auto;
+	}
+
+	.site-logo {
+		margin-left: var(--base-margin);
 	}
 
 	.mobile-menu,
