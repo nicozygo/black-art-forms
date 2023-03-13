@@ -13,6 +13,16 @@
 	export const homepage = data.props.homepage.data.attributes;
 	export const partners = data.props.partners.data;
 	let artists = data.props.artists.data;
+	export let painters = artists.filter((artist: { attributes: { genre: string | string[] } }) =>
+		artist.attributes.genre.includes('painter')
+	);
+	export let illustrators = artists.filter((artist: { attributes: { genre: string | string[] } }) =>
+		artist.attributes.genre.includes('illustrator')
+	);
+	export let photographers = artists.filter(
+		(artist: { attributes: { genre: string | string[] } }) =>
+			artist.attributes.genre.includes('photographer')
+	);
 </script>
 
 <svelte:window bind:innerWidth={width} />
@@ -21,8 +31,14 @@
 	<Intro description={homepage.introduction} />
 	<About description={homepage.about} />
 	<Partners {partners} title={homepage.partnersTitle} />
-	{#if artists.length > 0}
-		<Artists {artists} title="Painters" open={false} />
+	{#if painters.length > 0}
+		<Artists artists={painters} title="Painters" open={false} />
+	{/if}
+	{#if illustrators.length > 0}
+		<Artists artists={illustrators} title="Illustrators" open={false} />
+	{/if}
+	{#if photographers.length > 0}
+		<Artists artists={photographers} title="Photographers" open={false} />
 	{/if}
 	<Join
 		title={homepage.submitYourWorkTitle}

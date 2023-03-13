@@ -9,7 +9,7 @@
 
 <div class="list">
 	{#if open}
-		<ul transition:fly={{ x: -20, duration: 500 }}>
+		<ul in:fly={{ x: -20, duration: 500 }}>
 			{#each artists as artist}
 				<a href={`/artists/${artist.attributes.slug}`}>
 					<li>{artist.attributes.fullName}</li>

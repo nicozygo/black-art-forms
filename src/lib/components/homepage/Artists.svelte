@@ -8,7 +8,7 @@
 </script>
 
 <section class="horizontal" id={title.toLocaleLowerCase()}>
-	<div class="gallery">
+	<div class={open ? 'gallery compressed' : 'gallery'}>
 		<div class="drawer">
 			<h2>{title}</h2>
 			<Drawer {artists} bind:open />
@@ -26,12 +26,16 @@
 <style>
 	.gallery {
 		display: grid;
-		grid-template-columns: 0.6fr 1.25fr 10%;
+		grid-template-columns: 0.35fr 1.25fr 20%;
 		grid-template-rows: 1fr;
 		grid-column-gap: var(--padding-md);
 		grid-row-gap: 0px;
 		align-items: center;
 		height: 100%;
+	}
+
+	.compressed {
+		grid-template-columns: 0.65fr 1.25fr;
 	}
 	.drawer {
 		display: flex;
@@ -46,6 +50,9 @@
 
 	@media only screen and (max-width: 1400px) and (min-width: 1024px) {
 		.gallery {
+			grid-template-columns: 0.5fr 1.25fr;
+		}
+		.compressed {
 			grid-template-columns: 0.75fr 1.25fr;
 		}
 	}
@@ -57,13 +64,13 @@
 	}
 	@media only screen and (max-width: 1023px) and (min-width: 768px) {
 		.masonry {
-			column-count: 4;
+			column-count: 5;
 		}
 	}
 
 	@media only screen and (max-width: 767px) and (min-width: 480px) {
 		.masonry {
-			column-count: 2;
+			column-count: 3;
 		}
 	}
 
