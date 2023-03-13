@@ -23,9 +23,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 0 var(--base-padding);
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1024px) {
 		.wrapper {
 			flex-direction: column;
 			align-items: start;
@@ -51,10 +52,11 @@
 
 	@media (max-width: 768px) {
 		.partners {
+			width: 80%;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(4, 1fr);
 			margin: auto;
-			padding: 10px 20px 10px 0;
+			padding: 40px 20px 40px 0;
 		}
 	}
 </style>

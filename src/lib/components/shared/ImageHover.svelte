@@ -42,7 +42,7 @@
 	}
 
 	figure:hover {
-		scale: 1.25;
+		scale: 1.1;
 		z-index: 99;
 		box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
 		background: white;

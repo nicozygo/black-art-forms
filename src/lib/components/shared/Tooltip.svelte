@@ -33,5 +33,6 @@
 		background: white;
 		padding: var(--base-padding);
 		position: absolute;
+		max-width: 500px;
 	}
 </style>

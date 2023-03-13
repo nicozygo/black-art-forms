@@ -32,6 +32,7 @@
 		grid-row-gap: 0px;
 		align-items: center;
 		height: 100%;
+		padding: 0 var(--base-padding);
 	}
 
 	.compressed {
@@ -61,6 +62,9 @@
 		.gallery {
 			grid-template-columns: 1fr;
 		}
+		h2 {
+			margin-bottom: var(--margin-md);
+		}
 	}
 	@media only screen and (max-width: 1023px) and (min-width: 768px) {
 		.masonry {
@@ -68,13 +72,10 @@
 		}
 	}
 
-	@media only screen and (max-width: 767px) and (min-width: 480px) {
-		.masonry {
-			column-count: 3;
+	@media only screen and (max-width: 767px) {
+		.gallery {
+			margin: auto;
 		}
-	}
-
-	@media only screen and (max-width: 479px) {
 		.masonry {
 			column-count: 2;
 		}
