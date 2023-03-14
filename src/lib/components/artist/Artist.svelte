@@ -44,7 +44,7 @@
 		width: 250px;
 		height: 250px;
 		transform: rotate(45deg) translateY(10px);
-		border: var(--base-padding) solid black;
+		border: var(--base-padding) solid var(--color);
 	}
 
 	.bio {

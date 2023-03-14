@@ -20,19 +20,22 @@
 	</div>
 </section>
 
-<style lang="scss">
+<style>
 	.masonry {
 		/* Masonry container */
 		column-count: 4;
 		column-gap: 1em;
-		@media only screen and (max-width: 768px) {
-			column-count: 2;
-		}
 	}
 	.item {
 		/* Masonry bricks or child elements */
 		display: inline-block;
 		margin: 0 0 1em;
 		width: 100%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.masonry {
+			column-count: 2;
+		}
 	}
 </style>

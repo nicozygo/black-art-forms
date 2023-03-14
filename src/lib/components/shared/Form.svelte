@@ -39,10 +39,10 @@
 
 	button {
 		margin-top: 2em;
-		color: white;
+		color: var(--altcolor);
 		padding: 15px 20px;
 		border: 0;
-		background: black;
+		background: var(--color);
 		border-radius: 5px;
 		text-transform: capitalize;
 		font-weight: 500;

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
 	export let dark = false;
+	console.log('🚀 ~ file: DarkSwitch.svelte:4 ~ dark:', dark);
 
 	function toggleTheme() {
 		dark = !dark;

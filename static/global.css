@@ -44,6 +44,13 @@
 	--font-size-mobile-xxxl: 5.125rem;
 }
 
+[data-theme='light'] {
+	--primary: #202020;
+	--secondary: #f6f6f6;
+	--color: black;
+	--altcolor: white;
+}
+
 [data-theme='dark'] {
 	--primary: #f6f6f6;
 	--secondary: #202020;
@@ -116,6 +123,13 @@ body {
 	width: 100%;
 	display: flex;
 	flex-flow: row wrap;
+}
+
+.switch {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: var(--padding-xl) 0;
+	box-sizing: border-box;
 }
 
 h1 {

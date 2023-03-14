@@ -32,7 +32,7 @@
 		position: fixed;
 		width: 100%;
 		box-shadow: 0 0 10px var(--grey);
-		background: var(--secondary);
+		background: var(--altcolor);
 		opacity: 0.95;
 		z-index: 999;
 	}

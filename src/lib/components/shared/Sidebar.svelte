@@ -24,7 +24,7 @@
 	aside {
 		width: 100vw;
 		height: 100vh;
-		background-color: white;
+		background-color: var(--altcolor);
 		z-index: 999;
 		position: sticky;
 		top: 0;

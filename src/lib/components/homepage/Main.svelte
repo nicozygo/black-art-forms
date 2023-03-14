@@ -1,8 +1,6 @@
 <script lang="ts">
 	import ScrollButton from '$shared/ScrollButton.svelte';
 	import DarkSwitch from '$shared/DarkSwitch.svelte';
-
-	export let dark: boolean = false;
 	export let width: number;
 	let main: HTMLElement | null;
 
@@ -29,7 +27,7 @@
 </main>
 <div class="row">
 	<div class="mode">
-		<DarkSwitch {dark} />
+		<DarkSwitch />
 	</div>
 	<div class="scrolling">
 		<ScrollButton />

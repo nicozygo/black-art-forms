@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from '../../$types';
+	import DarkSwitch from '$shared/DarkSwitch.svelte';
 	import Artist from '$lib/components/artist/Artist.svelte';
 	import Artwork from '$lib/components/artist/Artwork.svelte';
 
@@ -14,6 +15,9 @@
 <main>
 	<Artist {name} {profile} {bio} />
 	<Artwork {artwork} />
+	<div class="switch">
+		<DarkSwitch />
+	</div>
 </main>
 
 <style>
@@ -21,6 +25,7 @@
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: column;
 	}
 
 	@media (max-width: 1024px) {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from '../$types';
+	import DarkSwitch from '$shared/DarkSwitch.svelte';
 	import Criteria from '$components/criteria/Criteria.svelte';
 	import Judges from '$components/criteria/Judges.svelte';
 
@@ -12,6 +13,9 @@
 <main>
 	<Criteria {criteria} {testimonial} />
 	<Judges {judges} />
+	<div class="switch">
+		<DarkSwitch />
+	</div>
 </main>
 
 <style>

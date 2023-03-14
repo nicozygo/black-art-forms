@@ -22,7 +22,7 @@
 		margin-right: 10px;
 		height: 1em;
 		width: 1em;
-		background: black;
+		background: var(--color);
 		top: 0.5em;
 		left: 0;
 		transform: rotate(45deg);
