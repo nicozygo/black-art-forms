@@ -11,7 +11,7 @@
 	}
 </script>
 
-<section class="horizontal" id="join-us">
+<section class="horizontal" id="submit-your-work">
 	<div class="join">
 		<div class="description">
 			<h2>{title}</h2>

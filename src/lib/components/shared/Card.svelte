@@ -58,9 +58,9 @@
 		left: 0;
 		height: 92%;
 		height: calc(100% - 40px);
-		background: var(--primary);
+		background: var(--altcolor);
 		overflow: scroll;
-		color: white;
+		color: var(--color);
 		padding: var(--padding-md);
 	}
 
@@ -73,8 +73,8 @@
 	h3 {
 		position: absolute;
 		bottom: var(--padding-md);
-		color: white;
-		background: black;
+		color: var(--color);
+		background: var(--secondary);
 		padding: 5px;
 	}
 </style>

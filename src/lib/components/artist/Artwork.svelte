@@ -35,7 +35,4 @@
 		margin: 0 0 1em;
 		width: 100%;
 	}
-	.art {
-		width: 100%;
-	}
 </style>

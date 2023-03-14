@@ -2,6 +2,7 @@
 	import ScrollButton from '$shared/ScrollButton.svelte';
 	import DarkSwitch from '$shared/DarkSwitch.svelte';
 
+	export let dark: boolean = false;
 	export let width: number;
 	let main: HTMLElement | null;
 
@@ -28,7 +29,7 @@
 </main>
 <div class="row">
 	<div class="mode">
-		<DarkSwitch />
+		<DarkSwitch {dark} />
 	</div>
 	<div class="scrolling">
 		<ScrollButton />
@@ -36,6 +37,11 @@
 </div>
 
 <style>
+	:global(.dark) {
+		background: var(--primary);
+		color: white;
+	}
+
 	main {
 		padding: 0;
 		height: 95vh;

@@ -1,20 +1,20 @@
 <script lang="ts">
 	export let description: string;
-	let isHovered = false;
+	let hover = false;
 	let x: number;
 	let y: number;
 
 	function mouseOver(e: { pageX: number; pageY: number }) {
-		isHovered = true;
-		x = e.pageX + 5;
-		y = e.pageY + 5;
+		hover = true;
+		x = e.pageX + 10;
+		y = e.pageY + 10;
 	}
 	function mouseMove(e: { pageX: number; pageY: number }) {
-		x = e.pageX + 5;
-		y = e.pageY + 5;
+		x = e.pageX + 10;
+		y = e.pageY + 10;
 	}
 	function mouseLeave() {
-		isHovered = false;
+		hover = false;
 	}
 </script>
 
@@ -23,14 +23,14 @@
 	<slot />
 </div>
 
-{#if isHovered}
+{#if hover}
 	<div style="top: {y}px; left: {x}px;" class="tooltip col-3-lg col-4-md">{description}</div>
 {/if}
 
 <style>
 	.tooltip {
 		box-shadow: 1px 1px 20px var(--grey);
-		background: white;
+		background: var(--secondary);
 		padding: var(--base-padding);
 		position: absolute;
 		max-width: 500px;

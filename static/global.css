@@ -12,13 +12,14 @@
 	--error: #df291c;
 	--lightgrey: #e4e4e4;
 	--grey: #848484;
+	--color: black;
+	--altcolor: white;
 
 	/* spacing */
 	--base-padding: 10px;
 	--padding-md: 20px;
 	--padding-lg: 30px;
 	--padding-xl: 40px;
-
 	--base-margin: 10px;
 	--margin-md: 20px;
 	--margin-lg: 30px;
@@ -43,6 +44,13 @@
 	--font-size-mobile-xxxl: 5.125rem;
 }
 
+[data-theme='dark'] {
+	--primary: #f6f6f6;
+	--secondary: #202020;
+	--color: white;
+	--altcolor: black;
+}
+
 * {
 	color: inherit;
 	margin: 0;
@@ -52,8 +60,9 @@ body {
 	font-family: var(--base-font);
 	line-height: 1.5;
 	font-size: var(--base-font-size);
-	background: var(--secondary);
 	overflow-x: hidden;
+	background: var(--secondary);
+	color: var(--color);
 }
 
 .overflow {
@@ -141,10 +150,11 @@ h4,
 h5 {
 	font-family: var(--heading-font);
 	text-transform: uppercase;
+	color: var(--color);
 }
 
 a {
-	color: black;
+	color: var(--color);
 	font-weight: 600;
 }
 

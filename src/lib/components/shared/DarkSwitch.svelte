@@ -1,9 +1,18 @@
 <script lang="ts">
 	import Icon from './Icon.svelte';
-	let dark = false;
+	export let dark = false;
+
+	function toggleTheme() {
+		dark = !dark;
+		if (dark) {
+			document.documentElement.dataset.theme = 'dark';
+		} else {
+			document.documentElement.dataset.theme = 'light';
+		}
+	}
 </script>
 
-<button on:click={() => (dark = !dark)} class:active={dark}>
+<button on:click={toggleTheme}>
 	{#if dark}
 		<Icon name="sun" size="50px" />
 		<span>Light Mode</span>
@@ -20,9 +29,6 @@
 		align-items: center;
 		text-decoration: none;
 		border: 0;
-		transition: all 0.5s ease-in-out;
-	}
-	.active {
 		transition: all 0.5s ease-in-out;
 	}
 
